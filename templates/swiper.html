@@ -1,0 +1,103 @@
+{% extends 'parent-page.html' %}
+{% load static %}
+
+{% block body %}
+<section id="portfolio" class="portfolio section">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="section-title">
+      <h2 class="text-center">Our Portfolio</h2>
+      <p class="text-center">
+        Discover the elegance and creativity we bring to every space. Here’s a showcase of our completed projects across various categories.
+      </p>
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="swiper-container portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+        <!-- Living Rooms -->
+        <div class="swiper-slide">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/living1.jpg' %}" class="img-fluid" alt="Living Room Design">
+            <div class="portfolio-info">
+              <h4>Modern Living Room</h4>
+              <p>Living Room</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/living2.jpg' %}" class="img-fluid" alt="Living Room Design">
+            <div class="portfolio-info">
+              <h4>Elegant Living Room</h4>
+              <p>Living Room</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bedrooms -->
+        <div class="swiper-slide">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/bed1.jpg' %}" class="img-fluid" alt="Bedroom Design">
+            <div class="portfolio-info">
+              <h4>Cozy Bedroom</h4>
+              <p>Bedroom</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="portfolio-wrap">
+            <img src="{% static 'assets/img/bedroom2.jpg' %}" class="img-fluid" alt="Bedroom Design">
+            <div class="portfolio-info">
+              <h4>Modern Bedroom</h4>
+              <p>Bedroom</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more categories like Offices, Dining Areas, and Outdoor Spaces -->
+
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize Swiper
+  const swiper = new Swiper('.swiper-container', {
+    loop: true, // Loop the slides
+    spaceBetween: 30, // Space between slides
+    slidesPerView: 1, // Default: Show 1 slide per view (mobile)
+    navigation: {
+      nextEl: '.swiper-button-next', // Next button
+      prevEl: '.swiper-button-prev', // Previous button
+    },
+    pagination: {
+      el: '.swiper-pagination', // Pagination dots
+      clickable: true, // Enable clicking on pagination dots
+    },
+    breakpoints: {
+      // For screens wider than 768px (Tablets and up)
+      768: {
+        slidesPerView: 2, // Show 2 slides per view
+      },
+      // For screens wider than 992px (Laptops and up)
+      992: {
+        slidesPerView: 3, // Show 3 slides per view (large screens)
+      }
+    },
+    zoom: true, // Enable zooming on images (optional)
+  });
+});
+</script>
+{% endblock %}

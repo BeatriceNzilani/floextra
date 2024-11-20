@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FloextraDecor</title>
+  <meta name="description" content="Interior design services">
+  <meta name="keywords" content="Interior Design, Home Decor, Furniture, Space Planning, Lighting Design">
+  {% load static %}
+
+    <style>
+.service-item {
+    background: linear-gradient(to top, #bc7b27 0%, transparent 100%);
+    background-size: 100% 0%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.services .service-item:hover {
+    transform: translateY(-10px) !important;
+        background-size: 100% 100%;
+
+  }
+
+.portfolio-wrap img{
+    height:230px !important;
+
+}
+    </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <link rel="icon" href="{% static 'assets/img/240_F_83782219_1HJhSpxxWy2OLXa5YRqXmlt5ItTrhETZ.jpg' %}" style="color: white !important;">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- HEADER-->
+  <header class="sticky-top" id="header">
+    <div class="bar d-flex justify-content-between align-items-center ">
+      <div class="container  d-flex justify-content-center justify-content-md-between">
+        <div class="d-none d-md-flex align-items-center">
+          <i class="bi bi-clock me-1 "></i> Monday - Saturday, 8AM to 10PM
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-phone me-1"></i> Call us now +254 799 912 344
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm d-flex justify-content-between align-items-center">
+      <div class="container justify-content-between">
+        <a href="#" class="navbar-brand">FLOEXTRADECOR <img src="{% static 'assets/img/1664928.png' %}" alt="" id="naa" class="align-items-center"></a>
+        <button class="navbar-toggler" data-bs-target="#links" data-bs-toggle="collapse" aria-label="navigations" aria-expanded="false" type="button" aria-controls="links">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="links">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a href="#" class="nav-link active"> Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"> About Us</a>
+            </li>
+<li class="nav-item">
+              <a href="#" class="nav-link"> Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"> Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+      {% block body %}
+      	
+      {% endblock %}
+      
+  </main>
+
+
+  <footer  class="container-fluid" style="background-color: rgba(234,226,226,0.5); margin-top: 70px" >
+
+        <div class="container">
+            <div class="row gy-4 d-flex ms-5">
+                <div class="col-12 col-md-6 col-lg-3">
+         <h4 class="mb-3 mt-4">FLOEXTRADECOR</h4>
+                    <p>BBS Mall,3<sup>rd</sup>Floor</p>
+                    <P>Eastleigh section III,</p>
+                    <p>Nairobi Kenya</P>
+                    <p><span class="fw-bold">Phone</span>:+254 799 912 344</p>
+                    <a href="mailto:floextradecor@gmail.com" style="text-decoration: none;color: black;font-weight: normal"> <span class="fw-bold">Email</span>:floextradecor@gmail.com</a>
+                </div>
+   <div class="col-12 col-md-6 col-lg-3">
+      <h4 class="mt-4">Our Services</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black  fw-normal">Space Planning</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Custom Furniture Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black  fw-normal fw-normal">Color Consultations</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Lighting Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Project Management</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <h4 class="mb-2 mt-4">Quick Links</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-black fw-normal ">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+  <h4 class="mb-2 mt-4">Follow Us</h4>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a href="https://facebook.com/floextradecor" class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-facebook fw-normal"></i> Facebook
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="https://twitter.com/floextradecor " class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-twitter fw-normal"></i> Twitter
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="https://instagram.com/floextradecor" class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-instagram fw-normal"></i> Instagram
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="https://linkedin.com/company/floextradecor" class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-linkedin fw-normal"></i> LinkedIn
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+            </div>
+
+        </div>
+        <hr>
+        <div>
+            <p class="text-center">© Copyright <a href="#" style="text-decoration: none;color: black">floextradecor</a> All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+<script>
+  AOS.init();
+</script>
+
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

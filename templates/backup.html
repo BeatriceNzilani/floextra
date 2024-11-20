@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FloextraDecor</title>
+  <meta name="description" content="Interior design services">
+  <meta name="keywords" content="Interior Design, Home Decor, Furniture, Space Planning, Lighting Design">
+  {% load static %}
+
+    <style>
+
+    </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <link rel="icon" href="{% static 'assets/img/240_F_83782219_1HJhSpxxWy2OLXa5YRqXmlt5ItTrhETZ.jpg' %}" style="color: white !important;">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- HEADER-->
+  <header class="sticky-top" id="header">
+    <div class="bar d-flex justify-content-between align-items-center ">
+      <div class="container  d-flex justify-content-center justify-content-md-between">
+        <div class="d-none d-md-flex align-items-center">
+          <i class="bi bi-clock me-1 "></i> Monday - Saturday, 8AM to 10PM
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-phone me-1"></i> Call us now +254 799 912 344
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm d-flex justify-content-between align-items-center">
+      <div class="container justify-content-between">
+        <a href="#" class="navbar-brand">FLOEXTRADECOR <img src="{% static 'assets/img/1664928.png' %}" alt="" id="naa" class="align-items-center"></a>
+        <button class="navbar-toggler" data-bs-target="#links" data-bs-toggle="collapse" aria-label="navigations" aria-expanded="false" type="button" aria-controls="links">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="links">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a href="#" class="nav-link active"> Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"> About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button">Services</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Space Planning</a></li>
+                <li><a class="dropdown-item" href="#">Custom Furniture Design</a></li>
+                <li><a class="dropdown-item" href="#">Color Consultations</a></li>
+                <li><a class="dropdown-item" href="#">Lighting Design</a></li>
+                <li><a class="dropdown-item" href="#">Project Management</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"> Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+                                <!--CAROUSEL-->
+ <section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/dining2.jpg' %}" alt="">
+          <div class="carousel-caption">
+            <p data-text="Elevate your space with stylish interiors." class="textcaption">Elevate your space with stylish interiors.</p>
+              <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/living4.jpg' %}" alt="">
+          <div class="carousel-caption">
+            <p data-text="Design solutions that fit your lifestyle." class="textcaption">Design solutions that fit your lifestyle.</p>
+                        <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+
+          </div>
+
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/v1.jpg' %}" alt="">
+          <div class="carousel-caption">
+            <p data-text="Beautify your home with custom designs." class="textcaption">Beautify your home with custom designs.</p>
+                        <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/img_2.png' %}" alt="">
+          <div class="carousel-caption">
+              <p data-text="Craft an elegant, efficient workspace with us." class="textcaption">Craft an elegant workspace with us.</p>
+                        <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+</div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/bed1.jpg' %}" alt="">
+          <div class="carousel-caption">
+            <p data-text="Designing peaceful bedrooms for ultimate comfort." class="textcaption">Designing peaceful bedrooms for ultimate comfort.</p>
+                        <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+</div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/shelve2.png' %}" alt="">
+          <div class="carousel-caption">
+            <p data-text="Transform your space with stylish custom shelves." class="textcaption">Transform your space with stylish custom shelves.</p>
+                        <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+</div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/living2.jpg' %}" alt="">
+          <div class="carousel-caption">
+            <p data-text="Create timeless and inviting living spaces." class="textcaption">Create timeless and inviting living spaces.</p>
+                        <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+</div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-slide="prev" data-bs-target="#heroCarousel">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: gray; border-radius: 50%; padding: 0; z-index: 1000"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-slide="next" data-bs-target="#heroCarousel">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: gray; border-radius: 50%; padding: 0; z-index: 1000"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <ol class="carousel-indicators" role="button">
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="2"></li>
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="3"></li>
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="4"></li>
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="5"></li>
+        <li data-bs-target="#heroCarousel" data-bs-slide-to="6"></li>
+      </ol>
+    </div>
+
+</section>
+     <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container">
+    <h4 class="text-center mt-5 fst-italic" data-aos="fade-up" data-aos-delay="100" id="h2flo">FloextraDecor Offering the best services.</h4>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+ <span data-purecounter-start="0" data-purecounter-end="5986" data-purecounter-duration="1" class="purecounter"></span>
+      <span style="font-size: 20px; padding-bottom: 0;">+</span>
+                  <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-palette color-blue flex-shrink-0"></i>
+              <div>
+ <span data-purecounter-start="0" data-purecounter-end="789" data-purecounter-duration="1" class="purecounter"></span>
+      <span style="font-size: 20px; padding-bottom: 0;">+</span>
+                  <p>Design Styles</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-clipboard-check color-blue flex-shrink-0"></i>
+              <div>
+ <span data-purecounter-start="0" data-purecounter-end="9373" data-purecounter-duration="1" class="purecounter"></span>
+      <span style="font-size: 20px; padding-bottom: 0;">+</span>
+                  <p>Projects</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-person-lines-fill  flex-shrink-0"></i>
+              <div>
+ <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="1" class="purecounter"></span>
+      <span style="font-size: 20px; padding-bottom: 0;">+</span>
+                  <p>Designers</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+                            <!--WHY CHOOSE US-->
+
+
+    <h1 class="text-center text-capitalize " id="why">Why Choose Us?</h1>
+<section class="d-flex align-items-center container ">
+    <div class="row gy-4">
+        <div class="image-container col-lg-6 order-1 order-md-1  " id="image-container">
+        <div class="image-wrapper">
+            <img src="{% static 'assets/img/living3.jpg' %}" alt="Image 1" class="image-front ">
+            <img src="{% static 'assets/img/img_3.png' %}" alt="Image 2" class="image-back ">
+        </div>
+    </div>
+
+    <div class="text-center mt-4 col-lg-6 order-1 order-md-1">
+<h3  class="text-center mb-5"> Enjoy our services! </h3>
+        <p >
+            At <span style="color: #bc7b27;">FloextraDecor</span> , we transform your space with a blend of creativity, craftsmanship, and the finest materials.
+            Our team of expert designers ensures that each project is tailored to reflect your unique style and needs.
+            Whether you're revamping your living room or designing your office, we provide exceptional interior solutions
+            that make your spaces both beautiful and functional.<br><br><br>
+            <a class="btn  text-white  " href="#" id="btn1"   >Explore Our Services</a>
+
+        </p>
+    </div>
+        </div>
+</section>
+<br><br><br><br>
+ <section id="gallery" class="gallery section">
+
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-center">Gallery</h2>
+<p class="text-center">Discover the artistry of interior transformation with FloextraDecor. Explore our curated designs that blend elegance, functionality, and your unique style, creating spaces that inspire and captivate.</p>
+
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/img_3.png' %}"><img src="{% static 'assets/img/img_3.png' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/living1.jpg' %}"><img src="{% static 'assets/img/living1.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/rea.jpg' %}"><img src="{% static 'assets/img/rea.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/kitchen.jpg' %}" ><img src="{% static 'assets/img/kitchen.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/l10.webp' %}"><img src="{% static 'assets/img/l10.webp' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/art.jpg' %}"><img src="{% static 'assets/img/art.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'assets/img/b3.jpg' %}"><img src="{% static 'assets/img/b3.jpg' %}" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+<br><br>
+<section id="zoom">
+
+      <div class="container" >
+  <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+    <div class="col-xl-10">
+      <div class="text-center">
+        <h4>Transform Your Space with FloextraDecor</h4>
+        <p>
+          Ready to elevate your interiors? Whether you need a touch of elegance or a complete makeover,
+          our experts at FloextraDecor will bring your vision to life. From painting to seating, we’ve got you covered.
+        </p>
+
+              <a href="#" class="btn text-white" id="btn">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+
+
+
+
+
+  <footer  class="container-fluid" style="background-color: rgba(234,226,226,0.5)">
+        <div class="container">
+            <div class="row gy-4 d-flex ms-5">
+                <div class="col-12 col-md-6 col-lg-3">
+         <h4 class="mb-3 mt-4">FLOEXTRADECOR</h4>
+                    <p>BBS Mall,3<sup>rd</sup>Floor</p>
+                    <P>Eastleigh section III,</p>
+                    <p>Nairobi Kenya</P>
+                    <p><span class="fw-bold">Phone</span>:+254 799 912 344</p>
+                    <a href="mailto:floextradecor@gmail.com" style="text-decoration: none;color: black;font-weight: normal"> <span class="fw-bold">Email</span>:floextradecor@gmail.com</a>
+                </div>
+   <div class="col-12 col-md-6 col-lg-3">
+      <h4 class="mt-4">Our Services</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black  fw-normal">Space Planning</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Custom Furniture Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black  fw-normal fw-normal">Color Consultations</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Lighting Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Project Management</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <h4 class="mb-2 mt-4">Quick Links</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-black fw-normal ">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link  text-black fw-normal">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+  <h4 class="mb-2 mt-4">Follow Us</h4>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a href="https://facebook.com/floextradecor" class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-facebook fw-normal"></i> Facebook
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="https://twitter.com/floextradecor " class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-twitter fw-normal"></i> Twitter
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="https://instagram.com/floextradecor" class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-instagram fw-normal"></i> Instagram
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="https://linkedin.com/company/floextradecor" class="nav-link text-black fw-normal" target="_blank">
+        <i class="bi bi-linkedin fw-normal"></i> LinkedIn
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+            </div>
+
+        </div>
+        <hr>
+        <div>
+            <p class="text-center">© Copyright <a href="#" style="text-decoration: none;color: black">floextradecor</a> All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+<script>
+  AOS.init();
+</script>
+
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+</body>
+
+</html>
+
+
+.navbar {
+      background-color: white;
+
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block !important;
+    }
+#naa{
+    height:25px;
+    margin-top: -5px;
+    margin-left: 7px
+}
+    .bar {
+      background-color: lightgray;
+      height: 30px;
+    }
+
+    .navbar-brand {
+      font-weight: bolder;
+      font-family: "Georgia", serif;
+        color: #bc7b27;
+    }
+
+    #header .nav-link {
+      color: black;
+      font-weight: bold !important;
+    }
+
+    img {
+      height: 500px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+    }
+
+    .carousel-item img {
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-indicators li.active {
+      background-color: black;
+      transform: scale(1.3);
+      padding: 1px;
+    }
+
+    .carousel-indicators li {
+      cursor: pointer;
+    }
+
+    .carousel-indicators {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      z-index: 15;
+      padding: 10px;
+    }
+
+    .textcaption {
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+font-family: "Georgia", serif;
+    margin-bottom: 10%;
+margin-left:10px ;
+color: black;
+        z-index: 1000;
+    background-color: rgba(248, 246, 246, 0.5);
+
+}
+
+    #btn{
+        margin-bottom: 5% !important;
+       background-color: black !important;
+        padding: 10px;
+        border-radius: 10px;
+        width: 20%
+    }
+    #btn:hover{
+background-color: #bc7b27 !important;    }
+    #zoom{
+        margin-top: 50px;
+        background-color: #faf8f8;
+    }
+
+
+
+
+
+  h1,h2,h3,h4,h5{
+            font-family: "Georgia", serif; !important;
+
+  }
+  .stats .stats-item {
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+    margin-top: 30px;
+}
+
+.stats .stats-item i {
+   font-size: 50px;
+  line-height: 0;
+color: #bc7b27;
+    margin-right: 20px;
+    font-weight: bolder;
+}
+
+.stats .stats-item span {
+ font-size: 14px;
+}
+
+.stats .stats-item p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+.purecounter{
+
+    font-family: "Georgia", serif; !important;
+    font-size:25px !important;
+    font-weight: bold;
+
+
+}
+
+#image-container {
+    position: relative;
+    perspective: 1000px;
+    height: 400px;
+}
+
+.image-wrapper {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.image-front, .image-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-back {
+    transform: rotateY(180deg);
+}
+
+#image-container:hover .image-wrapper {
+    transform: rotateY(180deg);
+}
+#why{
+    margin-top: 150px !important;
+    margin-bottom: 50px;
+}
+#why:hover{
+  color: #bc7b27 !important;
+}
+#btn1{
+    background-color: black;
+}
+#btn1:hover{
+    background-color:#bc7b27 !important ;
+
+}
+#h2flo:hover{
+      color:#bc7b27 !important ;
+
+}
+
+
+
+    @media screen and (max-width: 450px) {
+      .carousel-item img {
+        width: 100%;
+        height: 300px;
+      }
+         .textcaption {
+             font-size: 15px;
+    margin-bottom: 10%;
+margin-left: 0;
+width: 99%;
+}
+         #btn{
+             width: 70%;
+         }
+
+
+    }
+
+
+
+ @media (min-width: 480px) and (max-width: 767px) {
+      .counter-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    grid-row-gap:8rem ;
+
+}
+       #btn{
+              padding: 10px;
+           border-radius: 10px;
+              width: 50%;
+              font-size: 14px;
+    }
+#image-container  img{
+    position: relative;
+    width: 30% !important;
+    height: 400px;
+}
+
+#image-container {
+    position: relative;
+    perspective: 1000px;
+    height: 400px;
+    width: 100% !important;
+}
+}
+
+
+
+
+.gallery {
+  overflow: hidden;
+}
+
+.gallery .swiper-wrapper {
+  height: auto;
+}
+
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid #bc7b27 ;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+    background-color:#bc7b27 !important ;
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+      width: 100% !important;
+  }
+
+  .gallery .swiper-slide-active {
+    border: 6px solid #bc7b27 ;
+
+    padding: 4px;
+    z-index: 1;
+    transform: scale(1.2);
+    transition: none;
+  }
+
+}
+
+
+
