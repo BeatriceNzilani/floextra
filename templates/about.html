@@ -1,79 +1,84 @@
-{% extends 'parent-page.html'%}
+{% extends 'parent-page.html' %}
 
 {% load static %}
 
 {% block body %}
-    <br><br>
-  <h1 class="text-center mb-5" data-aos="fade-up" data-aos-delay="100" >About Us</h1>
+<br><br>
+<h1 class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">About Us</h1>
 <div class="container">
-<div>
-    <div class="row gy-4">
-  <img src="{% static 'assets/img/fancy.jpg' %}" alt="Interior Design Showcase" class=" col-md-6 order-1 order-md-1 img-fluid mb-4" data-aos="fade-up" data-aos-delay="200" >
-<div class=" col-md-6 order-2 order-md-2 text-center align-item-center pb-5 pt-md-5" id="abt">
-  <h2 data-aos="fade-up" data-aos-delay="300" >Welcome to Floextra Decor</h2>
-  <p data-aos="fade-up" data-aos-delay="300" >
-    At <strong>Floextra Decor</strong>, we are passionate about transforming spaces into
-      captivating environments that reflect your unique style and personality. Founded in 2024 , we have proudly served countless clients,
-      delivering exceptional interior design solutions that combine functionality and elegance.
-  </p>
-            <a class="btn  text-white  " href="{% url 'services' %}" id="btn1"   >Explore Our Services</a>
-</div>
-        </div>
-</div>
+  <!-- Row 1: Welcome Section -->
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <img src="{% static 'assets/img/fancy.jpg' %}" alt="Interior Design Showcase" class="img-fluid mb-4" data-aos="fade-up" data-aos-delay="200">
     </div>
+    <div class="col-md-6 text-center align-items-center py-5" id="abt">
+      <h2 data-aos="fade-up" data-aos-delay="300">Welcome to Floextra Decor</h2>
+      <p data-aos="fade-up" data-aos-delay="300">
+        At <strong>Floextra Decor</strong>, we are passionate about transforming spaces into captivating environments that reflect your unique style and personality. Founded in 2024, we have proudly served countless clients, delivering exceptional interior design solutions that combine functionality and elegance.
+      </p>
+      <a class="btn btn-lg text-white mt-3" href="{% url 'services' %}" id="btn1">Explore Our Services</a>
+    </div>
+  </div>
 
-    <div class="text-center container" data-aos="fade-up" data-aos-delay="400" >
-  <h3>Our Vision</h3>
-  <p>
-    Our vision is to become a household name in interior design, recognized for our creativity, professionalism, and commitment to excellence. We aim to create inspiring spaces that not only meet but exceed our clients' expectations, redefining the art of living and working in style.
-  </p>
+  <!-- Row 2: Vision and Mission in Two Columns -->
+  <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
+    <div class="col-md-6">
+      <h3>Our Vision</h3>
+      <p>
+        Our vision is to become a household name in interior design, recognized for our creativity, professionalism, and commitment to excellence. We aim to create inspiring spaces that not only meet but exceed our clients' expectations, redefining the art of living and working in style.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h3>Our Mission</h3>
+      <p>
+        To provide innovative and personalized interior design services that bring our clients’ dreams to life. We are committed to delivering quality, attention to detail, and seamless execution in every project, regardless of size or complexity.
+      </p>
+    </div>
+  </div>
 
-  <h3>Our Mission</h3>
-  <p>
-    To provide innovative and personalized interior design services that bring our clients’ dreams to life. We are committed to delivering quality, attention to detail, and seamless execution in every project, regardless of size or complexity.
-  </p>
+  <!-- Row 3: What We Do and Why Choose Us in Two Columns -->
+  <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
+    <div class="col-md-6">
+      <h3>What We Do</h3>
+      <ul>
+        <li>Residential interior design to create cozy and stylish homes.</li>
+        <li>Commercial design for functional and aesthetically pleasing workspaces.</li>
+        <li>Custom furniture design and space planning.</li>
+        <li>Color consultancy, lighting solutions, and decorative accents.</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li>Tailored solutions that suit your style and budget.</li>
+        <li>Attention to detail to ensure every element aligns perfectly.</li>
+        <li>Use of premium-quality materials and modern design techniques.</li>
+        <li>Unwavering commitment to timelines and customer satisfaction.</li>
+      </ul>
+    </div>
+  </div>
 
-  <h3>What We Do</h3>
-  <p>
-    At Floextra Decor, we specialize in a variety of interior design services, including:
-  </p>
-  <ul>
-    <li>Residential interior design to create cozy and stylish homes.</li>
-    <li>Commercial design for functional and aesthetically pleasing workspaces.</li>
-    <li>Custom furniture design and space planning.</li>
-    <li>Color consultancy, lighting solutions, and decorative accents.</li>
-  </ul>
-
-  <h3>Why Choose Us?</h3>
-  <p>
-    Our team at Floextra Decor is dedicated to making your design journey effortless and enjoyable. We pride ourselves on:
-  </p>
-  <ul>
-    <li>Tailored solutions that suit your style and budget.</li>
-    <li>Attention to detail to ensure every element aligns perfectly.</li>
-    <li>Use of premium-quality materials and modern design techniques.</li>
-    <li>Unwavering commitment to timelines and customer satisfaction.</li>
-  </ul>
-
-  <h3>Our Team</h3>
-  <p>
-    We are a team of skilled interior designers, architects, and craftsmen who are passionate about bringing ideas to life. Our collaborative approach ensures that every project is handled with creativity, precision, and professionalism.
-  </p>
-
-  <h3 >Our Process</h3>
-  <p>
-    From concept to completion, we involve our clients at every step. Our process includes:
-  </p>
-  <ul >
-    <li >Initial consultation to understand your needs and preferences.</li>
-    <li>Conceptualizing designs and presenting detailed proposals.</li>
-    <li>Executing the project with precision and efficiency.</li>
-    <li>Final touches to ensure every detail is perfect.</li>
-  </ul>
-
-
-</div>
+  <!-- Row 4: Our Team and Our Process in Two Columns -->
+  <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
+    <div class="col-md-6">
+      <h3>Our Team</h3>
+      <p>
+        We are a team of skilled interior designers, architects, and craftsmen who are passionate about bringing ideas to life. Our collaborative approach ensures that every project is handled with creativity, precision, and professionalism.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h3>Our Process</h3>
+      <p>
+        From concept to completion, we involve our clients at every step. Our process includes:
+      </p>
+      <ul>
+        <li>Initial consultation to understand your needs and preferences.</li>
+        <li>Conceptualizing designs and presenting detailed proposals.</li>
+        <li>Executing the project with precision and efficiency.</li>
+        <li>Final touches to ensure every detail is perfect.</li>
+      </ul>
+    </div>
+  </div>
 </div>
 <br><br>
 {% endblock %}
-

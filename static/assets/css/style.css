@@ -7,11 +7,11 @@
     .dropdown:hover .dropdown-menu {
       display: block !important;
     }
-#naa{
-    height:25px;
-    margin-top: -5px;
-    margin-left: 7px
-}
+    #naa{
+      height:35px !important;
+      margin-top: -5px;
+      margin-left: 7px
+  }
     .bar {
       background-color: #fafafa;
       height: 30px;
@@ -582,3 +582,9 @@ color:#bc7b27 ;
 
 }
 
+.pay{
+  background-image: url('/static/assets/img/art4.jpg') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

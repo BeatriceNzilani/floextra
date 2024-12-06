@@ -1,21 +1,62 @@
-{% extends 'parent-page.html'%}
+{% extends 'parent-page.html' %}
 
 {% load static %}
 
 {% block body %}
-<h2>Make a Payment</h2>
+<style>.pay{
+  background-image: url('/static/assets/img/art4.jpg') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.pay::before{
+  content: '';
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#payment{
+   background-color: rgba(232, 229, 229, 0.7);
+    z-index: 1000;
+    margin-top: 30px;
 
-<form method="POST" action="{% url 'stk' %}">
-  {% csrf_token %}
-    <label for="phone">Phone Number :</label>
-    <input type="number" id="phone" name="phone" value="254" placeholder="Phone Number">
-    <br><br>
+}
+</style>
+<section class="pay">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card text-white" style="border-radius: 1rem; margin-top: -20px" id="payment">
+          <div class="card-body p-5 text-center">
 
-    <label for="amount">Amount :</label>
-    <input type="text" id="amount" name="amount" placeholder="Amount">
-    <br><br>
-  <button type="submit">Submit</button>
-</form>
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="text-uppercase text-black text-center mb-3 mt-0">Make a Payment</h2>
+              <p class="text-black mb-5">Please enter your phone number and amount to proceed.</p>
 
+              <form method="POST" action="{% url 'stk' %}">
+                {% csrf_token %}
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <input type="number" id="phone" name="phone" value="254" placeholder="Phone Number" required="required" class="form-control form-control-lg" />
+                  <label class="form-label text-start d-flex text-black" for="phone">Phone Number</label>
+                </div>
 
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <input type="text" id="amount" name="amount" placeholder="Amount" required="required" class="form-control form-control-lg" />
+                  <label class="form-label text-start d-flex text-black" for="amount">Amount</label>
+                </div>
+
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg px-5 text-white" type="submit" id="btn1">Submit</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

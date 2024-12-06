@@ -1,11 +1,13 @@
 from django.contrib import admin
-from .models import User, Bookings, ImageModel, NavigationLink  # Import models once
+from .models import User, Bookings, ImageModel, NavigationLink,contactinfo
 
 class NavigationLinkAdmin(admin.ModelAdmin):
-    list_display = ('title', 'display_url')  # Show title and clickable URL in the list view
+    list_display = ('title', 'display_url')  
 
-# Register models
+
 admin.site.register(NavigationLink, NavigationLinkAdmin)
 admin.site.register(User)
 admin.site.register(Bookings)
 admin.site.register(ImageModel)
+admin.site.register(contactinfo)
+
