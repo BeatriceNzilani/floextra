@@ -1,0 +1,41 @@
+{% extends 'parent-page.html' %}
+
+{% load static %}
+
+{% block body %}
+	<table class="table table-bordered border-black border-5 table-info mt-5 mb-5 me-0 text-center" style="margin-top: 30px">
+    <tr>
+        <th>Name</th>
+        <th>Phone </th>
+        <th>Date</th>
+        <th>Design Type</th>
+        <th>Budget</th>
+        <th>Color Preference</th>
+        <th>Furniture</th>
+        <th>Floor Design</th>
+        <th>Timeline</th>
+        <th>Comment</th>
+        <th class="me-0">Action</th>
+
+    </tr>
+    {% for x in bookings %}
+    	<tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.phone }}</td>
+            <td>{{ x.date }}</td>
+            <td>{{ x.design_type }}</td>
+            <td>{{ x.budget }}</td>
+            <td>{{ x.color_preference }}</td>
+            <td>{{ x.furniture_needs }}</td>
+            <td>{{ x.flooring_preference }}</td>
+            <td>{{ x.timeline }}</td>
+            <td>{{ x.comments }}</td>
+        <td>
+            <a href="/edit/{{ x.id }}" class="btn btn-warning">Edit</a>
+            <a href="/delete/{{ x.id }}" class="btn btn-danger">Delete</a>
+        </td>
+        </tr>
+    {% endfor %}
+
+    </table>
+{% endblock %}

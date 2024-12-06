@@ -13,8 +13,11 @@
     margin-left: 7px
 }
     .bar {
-      background-color: #f4f0f0;
+      background-color: #fafafa;
       height: 30px;
+    }
+    .nav-link:hover{
+      color: #bc7b27 !important;
     }
 
     .navbar-brand {
@@ -25,7 +28,11 @@
 
     #header .nav-link {
       color: black;
-      font-weight: bold !important;
+font-weight: bold;
+    }
+    #header:hover .nav-link:hover {
+      color: #bc7b27 !important;
+font-weight: bold;
     }
 
     img {
@@ -74,7 +81,7 @@ color: black;
 
     #btn{
         margin-bottom: 5% !important;
-       background-color: black !important;
+       background-color:black !important;
         padding: 10px;
         border-radius: 10px;
         width: 20%
@@ -91,7 +98,7 @@ background-color: #bc7b27 !important;    }
 
 
   h1,h2,h3,h4,h5{
-            font-family: "Georgia", serif; !important;
+            font-family: "Georgia", serif !important;
 
   }
   .stats .stats-item {
@@ -119,9 +126,9 @@ color: #bc7b27;
 }
 .purecounter{
 
-    font-family: "Georgia", serif; !important;
+    font-family: "Georgia", serif !important; 
     font-size:25px !important;
-    font-weight: bold;
+    font-weight:bold;
 
 
 }
@@ -199,7 +206,9 @@ width: 99%;
             .portfolio-wrap p{
             text-align: center;
          }
-
+#abt{
+    margin-top: 20px !important;
+}
     }
 
 
@@ -427,7 +436,6 @@ color:#bc7b27 ;
   margin-bottom: 20px;
   font-size: 28px;
   transition: ease-in-out 0.3s;
-    margin-right: 600px !important;
 }
 
 .services .service-item h3 {
@@ -476,6 +484,10 @@ color:#bc7b27 ;
   position: relative;
   text-align: center;
 }
+.portfolio-wrap:hover img {
+    transform: scale(1.05) !important;
+    transition: transform 0.3s ease-in-out;
+}
 
 .lightbox-img {
   max-width: 90%;
@@ -491,3 +503,82 @@ color:#bc7b27 ;
   color: white;
   cursor: pointer;
 }
+/* login*/
+#login{
+    background-color: rgba(232, 229, 229, 0.7);
+    z-index: 1000;
+
+
+}
+#form {
+    background-image: url('/static/assets/img/art4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+#form::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#registerform{
+    background-image: url('/static/assets/img/art4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#registerform::before{
+      content: '';
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#card{
+   background-color: rgba(232, 229, 229, 0.7);
+    z-index: 1000;
+    margin-top: 30px;
+
+}
+#bookform {
+  position: relative;
+  background-image: url('/static/assets/img/hot1.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+#bookform::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#bookform .container {
+  position: relative;
+  z-index: 2;
+}
+#car{
+  background-color: rgb(230, 233, 238,0.8);
+    z-index: 1000;
+    margin-top: 30px;
+
+}
+

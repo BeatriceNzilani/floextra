@@ -1,0 +1,104 @@
+{% extends 'parent-page.html' %}
+
+{% load static %}
+{% block body %}
+    <div class="container bg-white" id="bookparagrap">
+                  <h2 class="text-uppercase text-center  mb-3 mt-5"  data-aos="fade-up" data-aos-delay="100">Update Your Design Session</h2>
+
+<p class="text-center"  data-aos="fade-up" data-aos-delay="200"> Book your consultation today and let Floextra Decor bring your dream space to life with top-notch design services tailored to you! Whether you’re upgrading your home, office, or commercial space, our expert team ensures stunning results that match your vision and budget. Don’t wait—turn your ideas into reality with the best in interior design!<br><br>
+    <a href="{% url 'bookings' %}" class="btn text-white" id="btn"  data-aos="fade-up" data-aos-delay="300" >Thank you for choosing us.</a>
+</p>
+
+</div>
+
+
+<section class="bg-image" id="bookform">
+
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3" style>
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;" id="car" >
+            <div class="card-body p-5">
+
+              <form  method="POST" action="/update/{{ bookings.id }}"  >
+                {% csrf_token %}
+
+      <div class="form-outline mb-4">
+    <label class="form-label text-black fs-5" for="name">Name</label>
+    <input type="text" value="{{ bookings.name }}" id="name"  name="name" class="form-control form-control-lg" placeholder="Enter your name" required />
+</div>
+
+<div class="form-outline mb-4">
+    <label class="form-label text-black fs-5" for="phone">Phone Number </label>
+    <input type="tel" value="{{ bookings.phone }}" id="phone"  name="phone" class="form-control form-control-lg" placeholder="Enter your phone number" pattern="[0-9]{10}" required />
+</div>
+
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="date"  >Preferred Date</label>
+ <input type="datetime-local" value="{{ bookings.date }}" id="date" name="date" class="form-control form-control-lg" required />
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="design_type">Type of Design</label>
+
+                  <select id="design_type" value="{{ bookings.design_type }}" name="design_type" class="form-control form-control-lg" required>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="office">Office</option>
+                  </select>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="budget">Budget Range</label>
+ <input type="text" value="{{ bookings.budget }}" id="budget" name="budget" class="form-control form-control-lg" placeholder="e.g., ksh30,000-ksh 1M" required />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="color_preference">Preferred Colors</label>
+
+                  <input type="text" value="{{ bookings.color_preference }}" id="color_preference" name="color_preference" class="form-control form-control-lg" placeholder="e.g., Blue, White, Grey" />
+                </div>
+
+                <div class="form-outline mb-4">
+                                      <label class="form-label text-black fs-5" for="furniture_needs">Furniture Recommendations</label>
+
+                  <select id="furniture_needs" value="{{ bookings.furniture_needs }}"  name="furniture_needs" class="form-control form-control-lg">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="flooring_preference">Preferred Flooring Type</label>
+
+                  <input type="text" value="{{ bookings.flooring_preference }}" id="flooring_preference" name="flooring_preference" class="form-control form-control-lg" placeholder="e.g., Hardwood, Tiles" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="timeline">Expected Completion Timeline</label>
+
+                  <input type="text"  value=" {{ bookings.timeline }}" id="timeline" name="timeline" class="form-control form-control-lg" placeholder="e.g., 2 months" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label text-black fs-5" for="comments">Additional Comments/Requirements</label>
+
+                  <textarea id="comments" value="{{ bookings.comments }}" name="comments" rows="4" class="form-control form-control-lg" placeholder="Describe any specific needs"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button class="btn btn-lg px-5 text-white" style="background-color: #bc7b27;" type="submit">Update Bookings</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

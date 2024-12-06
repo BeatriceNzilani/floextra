@@ -4,25 +4,25 @@
 
 {% block body %}
     <br><br>
-  <h1 class="text-center fw-bold mb-5">About Us</h1>
+  <h1 class="text-center mb-5" data-aos="fade-up" data-aos-delay="100" >About Us</h1>
 <div class="container">
 <div>
     <div class="row gy-4">
-  <img src="{% static 'assets/img/fancy.jpg' %}" alt="Interior Design Showcase" class=" col-md-6 order-1 order-md-1 img-fluid mb-4">
-<div class=" col-md-6 order-2 order-md-2 text-center align-item-center pt-5" style="margin-top: 50px">
-  <h>Welcome to Floextra Decor</h>
-  <p >
+  <img src="{% static 'assets/img/fancy.jpg' %}" alt="Interior Design Showcase" class=" col-md-6 order-1 order-md-1 img-fluid mb-4" data-aos="fade-up" data-aos-delay="200" >
+<div class=" col-md-6 order-2 order-md-2 text-center align-item-center pb-5 pt-md-5" id="abt">
+  <h2 data-aos="fade-up" data-aos-delay="300" >Welcome to Floextra Decor</h2>
+  <p data-aos="fade-up" data-aos-delay="300" >
     At <strong>Floextra Decor</strong>, we are passionate about transforming spaces into
       captivating environments that reflect your unique style and personality. Founded in 2024 , we have proudly served countless clients,
       delivering exceptional interior design solutions that combine functionality and elegance.
   </p>
-            <a class="btn  text-white  " href="#" id="btn1"   >Explore Our Services</a>
+            <a class="btn  text-white  " href="{% url 'services' %}" id="btn1"   >Explore Our Services</a>
 </div>
         </div>
 </div>
     </div>
 
-    <div class="text-center container">
+    <div class="text-center container" data-aos="fade-up" data-aos-delay="400" >
   <h3>Our Vision</h3>
   <p>
     Our vision is to become a household name in interior design, recognized for our creativity, professionalism, and commitment to excellence. We aim to create inspiring spaces that not only meet but exceed our clients' expectations, redefining the art of living and working in style.
@@ -74,5 +74,6 @@
 
 </div>
 </div>
-
+<br><br>
 {% endblock %}
+

@@ -1,0 +1,61 @@
+{% extends 'parent-page.html'%}
+
+{% load static %}
+{% block body %}
+	<section class=" bg-image" id="registerform" >
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100 ">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card " style="border-radius: 15px;" id="card">
+            <div class="card-body p-5 ">
+              <h2 class="text-uppercase text-center mb-5 ">Create an account</h2>
+
+              <form method="POST">
+                 {% csrf_token %}
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="yname" name="name" required="required" class="form-control form-control-lg" />
+                  <label class="form-label text-black" for="yname">Your Name</label>
+                </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="tel" id="yname" required="required" name="phone"  class="form-control form-control-lg" />
+                  <label class="form-label text-black" for="yname">Your Phone No</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" id="yemail" required="required" name="email"  class="form-control form-control-lg" />
+                  <label class="form-label text-black" for="yemail">Your Email</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="password" id="ypassword" required="required" name="password"  class="form-control form-control-lg" />
+                  <label class="form-label text-black " for="ypassword">Password</label>
+                </div>
+
+
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2 bg-dark" type="checkbox" value="" id="agree" />
+                  <label class="form-check-label text-black" for="agree">
+                    I agree all statements in <a href="#!" class="text-body text-black"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                               <button data-mdb-button-init data-mdb-ripple-init class="btn  btn-lg px-5 text-white" type="submit" id="btn1">Register</button>
+
+                </div>
+
+                <p class="text-center mt-5 mb-0 text-black">Have already an account? <a href="{% url 'login' %}" class="fw-bold  text-black"><u style="color: #bc7b27">Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

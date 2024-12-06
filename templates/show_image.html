@@ -1,0 +1,27 @@
+{% extends 'parent-page.html' %}
+{% load static %}
+{% block body %}
+
+<br><br>
+
+<h1 class="text-center mb-2">Recently Uploaded Images</h1>
+
+<div class=" row  container  gy-4" style="margin: auto;" data-aos="fade-up" data-aos-delay="200">
+  {% for image in images %}
+ 
+  <div class="col-lg-4 col-md-6 portfolio-item living-room ">
+    <div class="portfolio-wrap">
+      <img style="height: 400px;" src="{{ image.image.url }}" class="img-fluid portfolio-lightbox preview-link" alt="{{ image.title }}" data-gallery="portfolioGallery" data-title="{{ image.title }}">
+      <div class="portfolio-info">
+        <p>{{ image.title }}</p>
+        <a href="{{ image.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ image.title }}">
+          <i class="fas fa-eye" style="color: #bc7b27"></i>
+        </a> View
+      
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+<br><br>
+{% endblock %}

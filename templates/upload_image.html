@@ -1,0 +1,66 @@
+{% extends 'parent-page.html' %}
+{% load static %}
+{% block body %}
+<style>
+  .gradient-custo{
+  background-image: url('/static/assets/img/art4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.gradient-custo::before{
+  content: '';
+background-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+#image-upload{
+   background-color: rgba(232, 229, 229, 0.7);
+    z-index: 1000;
+    margin-top: 30px;
+
+}
+#btn8:hover{
+  background-color: #bc7b27 !important;
+}
+</style>
+    <form method="POST" enctype="multipart/form-data" class="text-center d-block m-auto mb-4">
+        {% csrf_token %}
+        <section class="gradient-custo ">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card text-white" style="border-radius: 1rem; margin-top: -20px;" id="image-upload">
+                            <div class="card-body p-5 text-center">
+                                <div class="mb-md-5 mt-md-4 pb-5">
+                                    <h2 class="text-uppercase text-black text-center mb-3 mt-0">Upload Image</h2>
+                                    
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label text-start text-black" for="image">Image</label>
+                                        <input type="file" id="image" name="image" class="form-control form-control-lg"  required>
+                                    </div>
+                                    
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label text-start text-black" for="title">Title</label>
+                                        <input type="text" id="title" name="title" class="form-control form-control-lg" required>
+                                    </div>
+
+
+                                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-md px-5 text-white bg-black"  id="btn8" type="submit">Upload</button>
+                                    <br><br>
+                                    <a href="{% url 'image' %}" class="btn btn-md px-5 text-white " style="background-color: #bc7b27;">Display Images</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+{% endblock %}

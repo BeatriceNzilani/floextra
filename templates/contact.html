@@ -7,17 +7,26 @@
   <div class="container" data-aos="fade-up">
     <div class="section-title">
         <br><br>
-      <h1 class="text-center fw-bold ">Get in Touch</h1>
+      <h1 class="text-center  ">Get in Touch</h1>
+      {% if success %}
+      <div class="alert alert-success mt-4">
+          <p>{{ success }}</p>
+      </div>
+  {% endif %}
       <p class="text-center">Have questions or ready to transform your space? Reach out to us today and let’s create something extraordinary together! <br><br>
-          <a href="#" class="btn text-white" id="btn"  data-aos="fade-up" data-aos-delay="200">Get Started</a>
+
+          <a href="{% url 'register' %}" class="btn text-white" id="btn"  data-aos="fade-up" data-aos-delay="200">Book Today</a>
 </p>
     </div>
+    
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8230811302888!2d36.8439647735852!3d-1.2797756356161414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f170b1905d029%3A0x34d92f603e5aff18!2sBusiness%20Bay%20Square%20(BBS)%20Mall!5e0!3m2!1sen!2ske!4v1732099653399!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <br><br><br>
-    <div class="row  container">
+
+    <div class="row gy-4  container">
       <!--  Form -->
       <div class="col-lg-6">
-        <form action="submit_form_url" method="post" class="php-email-form">
+        <form  method="POST" >
+          {% csrf_token %}
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" name="name" id="name" class="form-control" required>
@@ -32,12 +41,12 @@
           </div>
             <br>
           <div class="text-center">
-            <button type="submit" class="btn  text-white" id="btn">Send Message</button>
+            <button type="submit" class="btn  text-white mb-5" id="btn1">Send Message</button>
           </div>
         </form>
       </div>
-<br>
-      <div class="col-lg-6">
+
+      <div class="col-lg-6 mt-5 ps-5" style="margin-top: 100px !important;">
         <div class="contact-info">
           <p>
             <i class="fas fa-phone-alt" style="color: #bc7b27 ; margin-right: 8px;"></i>

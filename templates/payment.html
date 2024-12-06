@@ -1,0 +1,14 @@
+{% extends 'parent-page.html' %}
+
+{% load static %}
+
+{% block body %}
+<div class="container mt-5 text-center">
+<h2  data-aos="fade-up" data-aos-delay="100" >Booking Successfully Completed!</h2>
+<p data-aos="fade-up" data-aos-delay="200" >We truly appreciate your trust in our services. Our team is committed to providing you with the highest quality and excellent customer experience. We look forward to your next visit and hope to exceed your expectations.
+     Thank you again for your support and confidence in us! <br><br>
+     <a href="{% url 'pay'%}"  style="text-decoration: none;" class="btn text-white" id="btn"  data-aos="fade-up" data-aos-delay="300" >Make Payment</a>
+    </p>
+
+</div><br><br>
+{% endblock %}

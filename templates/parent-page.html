@@ -49,13 +49,12 @@
   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
-<!-- HEADER-->
+
   <header class="sticky-top" id="header">
     <div class="bar d-flex justify-content-between align-items-center ">
       <div class="container  d-flex justify-content-center justify-content-md-between">
@@ -75,22 +74,29 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="links">
-          <ul class="navbar-nav ms-auto ">
+           <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a href="#" class="nav-link active"> Home</a>
+              <a href="{% url 'index' %}" class="nav-link active"> Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"> About Us</a>
-            </li>
-<li class="nav-item">
-              <a href="#" class="nav-link"> Services</a>
+              <a href="{% url 'about' %}" class="nav-link"> About Us</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"> Portfolio</a>
+              <a href="{% url 'services' %}" class="nav-link"> Services</a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Portfolio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a  style="background-color: #f0eeea; "class="dropdown-item" href="{% url 'portfolio' %}">Our Portfolio</a></li>
+             <li><a style="background-color: #f0eeea; " class="dropdown-item" href="{% url 'image' %}">Uploaded Images</a></li>
+                <li><a style="background-color: #f0eeea; " class="dropdown-item" href="{% url 'upload' %}">Upload Image</a></li>
+              </ul>
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link"> Contact </a>
+              <a href="{% url 'contact' %}" class="nav-link"> Contact </a>
             </li>
           </ul>
         </div>
@@ -107,7 +113,7 @@
   </main>
 
 
-  <footer  class="container-fluid" style="background-color: rgba(234,226,226,0.5); margin-top: 70px" >
+  <footer  class="container-fluid" style="background-color: rgba(234,226,226,0.5);margin-top: 20px" >
 
         <div class="container">
             <div class="row gy-4 d-flex ms-5">
@@ -123,19 +129,19 @@
       <h4 class="mt-4">Our Services</h4>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black  fw-normal">Space Planning</a>
+          <a href="{% url 'services' %}" class="nav-link  text-black  fw-normal">Space Planning</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">Custom Furniture Design</a>
+          <a href="{% url 'services' %}" class="nav-link  text-black fw-normal">Custom Furniture Design</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black  fw-normal fw-normal">Color Consultations</a>
+          <a href="{% url 'services' %}" class="nav-link  text-black  fw-normal fw-normal">Color Consultations</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">Lighting Design</a>
+          <a href="{% url 'services' %}" class="nav-link  text-black fw-normal">Lighting Design</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">Project Management</a>
+          <a href="{% url 'services' %}" class="nav-link  text-black fw-normal">Project Management</a>
         </li>
       </ul>
     </div>
@@ -145,19 +151,19 @@
       <h4 class="mb-2 mt-4">Quick Links</h4>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a href="#" class="nav-link text-black fw-normal ">Home</a>
+          <a href="{% url 'index' %}" class="nav-link text-black fw-normal ">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">About Us</a>
+          <a href="{% url 'about' %}" class="nav-link  text-black fw-normal">About Us</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">Services</a>
+          <a href="{% url 'services' %}" class="nav-link  text-black fw-normal">Services</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">Portfolio</a>
+          <a href="{% url 'portfolio' %}" class="nav-link  text-black fw-normal">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link  text-black fw-normal">Contact</a>
+          <a href="{% url 'contact' %}" class="nav-link  text-black fw-normal">Contact</a>
         </li>
       </ul>
     </div>
